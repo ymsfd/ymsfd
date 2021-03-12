@@ -19,16 +19,16 @@ publishDir = "docs"
     description = "yimusanfendi"
     keywords = "blog,developer,personal"
     info = "personal notes and thoughts"
-    avatarURL = "images/zhou.png"
+    avatarURL = ""
     #gravatar = "john.doe@example.com"
-    footerContent = "hello, visitor."
+    footerContent = "hello, nice to meet you."
 
     dateFormat = "January 2, 2006"
 
     hideFooter = false
     hideCredits = false
     hideCopyright = false
-    since = 2019
+    since = 2021
 
     # Git Commit in Footer, uncomment the line below to enable it.
    # commit = "https://github.com/luizdepra/hugo-coder/tree/"
@@ -180,20 +180,20 @@ publishDir = "docs"
 
 
     [languages.pt-br]
-        languageName = "Português"
-        title = "João Ninguém"
+        languageName = "CN"
+        title = "watermelon"
 
         [languages.pt-br.params]
-            author = "João Ninguém"
-            info = "Full Stack DevOps e Mágico"
-            description = "Sítio pessoal de João Ninguém"
-            keywords = "blog,desenvolvedor,pessoal"
-            footerContent = "Coloque algum texto aqui."
+            author = "watermelon"
+            info = "CS student"
+            description = "computer science"
+            keywords = "eat, sleep, code"
+            footerContent = "talk is cheap, show me the code."
 
         [languages.pt-br.menu]
 
             [[languages.pt-br.menu.main]]
-            name = "Sobre"
+            name = "about"
             weight = 1
             url = "about/"
 
@@ -203,11 +203,11 @@ publishDir = "docs"
             url = "posts/"
 
             [[languages.pt-br.menu.main]]
-            name = "Projetos"
+            name = "Projects"
             weight = 3
             url = "projects/"
 
             [[languages.pt-br.menu.main]]
-            name = "Contato"
+            name = "Contact"
             weight = 5
             url = "contact/"
