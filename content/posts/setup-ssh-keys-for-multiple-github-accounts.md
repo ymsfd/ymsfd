@@ -13,9 +13,9 @@ series = []
 
 
 The problem of managing multiple GitHub accounts came when I have a personal github account for collecting 
-various study resource or my side projects, and I do not want to this personal account for working in 
-a GitHub organization. Also, every push with a identity and password is quite annoying for me. So I set up 
-different SSH keys to easily manage multiple account.
+various study resource or my side projects, and I do not want to use this personal account for working in 
+a GitHub organization. Also, every push with identity and password is quite annoying for me. So I set up 
+different SSH keys to easily manage multiple accounts.
 
 # step 1:  go to .ssh folder and generate ssh keys for all your github accounts
 ```
