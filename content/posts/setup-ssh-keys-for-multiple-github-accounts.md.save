@@ -1,0 +1,89 @@
++++ 
+draft = false
+date = 2021-03-15T10:22:54+01:00
+title = "Setup SSH keys for multiple GitHub accounts"
+description = ""
+slug = ""
+authors = []
+tags = []
+categories = []
+externalLink = ""
+series = [
+
+The problem of managing multiple GitHub accounts came when I have a personal github account for collecting 
+various study resource or my side projects, and I do not want to this personal account for working in 
+a GitHub organization. Also, every push with a identity and password is quite annoying for me. So I set up 
+different SSH keys to easily manage multiple account.
+
+# step 1:  go to .ssh folder and generate ssh keys for all your github accounts
+```
+cd ~/.ssh
+ssh-keygen -t rsa -b 4096 -C "personal_github_email" 
+ssh-keygen -t -rsa -b 4096 -C "work_github_email"
+```
+
+# step 2 copy id_rsa_personal.pub and id_rsa_work.pub add to respective github account
+```
+cat id_rsa_personal.pub
+cat id_rsa_work.pub
+```
+
+# step 3: create config file in .ssh folder And add below configs
+```
+touch config
+
+Host github.com-personal
+HostName github.com
+User git
+IdentityFile ~/.ssh/id_rsa_personal
+
+Host github-work
+HostName github.com
+User git
+IdentityFile ~/.ssh/id_rsa_work
+```
+
+# step 4: create .gitconfig for personal and work directory with respective config git host names
+```
+cd ~
+nano ~/.gitconfig
+
+[user]
+  name = personal
+  email = personal-github-email
+[includeIf "gitdir:~/work/"]
+       path = ~/work/.gitconfig
+
+
+nano ~/work/.gitconfig
+[user]
+  name = work
+  email = work-github-email
+
+```
+
+
+# step 5: add new ssh keys
+```
+cd ~/.ssh
+ssh-add id_rsa_personl
+ssh-add id_rsa_work
+ssh-add -l
+```
+
+
+# step 6: check if the configuration is right
+```
+ssh -T github.com-personal
+ssh -T github.com-work
+```
+
+# step7: when clone repo from github.com, always remember to add hostname in url:
+```
+git clone git@github.com-personal:personal/repo_name
+```
+
+
+
+
+
