@@ -19,5 +19,7 @@ Here I list the topics I plan to work on in the near future.
 * install wordpress in a docker environment
 * comment function in hugo site
 * python regular expression cheatsheet for frequent usage
+* Jetson nano install anaconda/packages
+* Pytorch seqquence to sequence model understanding in code
 
 
