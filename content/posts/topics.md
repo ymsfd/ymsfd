@@ -1,7 +1,7 @@
 +++ 
 draft = false
 date = 2021-03-15T10:36:36+01:00
-title = "topics to research and write"
+title = "List of topics"
 description = ""
 slug = ""
 authors = []

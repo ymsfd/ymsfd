@@ -22,3 +22,5 @@ Or is it a dream? Dream exists when the body is in deep sleep. Did my body ever 
 more tired than last night, confused, what am I going to do today, will that make a difference to the current situation?
 I am losing my sleep and my willpower. They are both murdered by stress.
 
+
+
